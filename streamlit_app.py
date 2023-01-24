@@ -39,11 +39,11 @@ streamlit.dataframe(fruityvice_normalized)
 
 import snowflake.connector
 
-my_cnx = snowflake.connector.connect(user = "jiyamkhan"
-password = "Matrix@105"
-account = "ue69607"
-warehouse = "pc_rivery_wh"
-database = "pc_rivery_db" 
+my_cnx = snowflake.connector.connect(user = "jiyamkhan",
+password = "Matrix@105",
+account = "ue69607",
+warehouse = "pc_rivery_wh",
+database = "pc_rivery_db" ,
 schema = "public")
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
