@@ -40,8 +40,7 @@ try:
    else:
       back_from_function = get_fruityvice_data(fruit_choice)
       streamlit.dataframe(fruityvice_normalized)     
-      
- except URLError as e:
+except URLError as e:
     streamlit.error()
   
 streamlit.text(fruityvice_response)
