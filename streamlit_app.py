@@ -39,7 +39,7 @@ try:
       streamlit.error("Please select fruit to get information")
    else:
       back_from_function = get_fruityvice_data(fruit_choice)
-      streamlit.dataframe(fruityvice_normalized)     
+      streamlit.dataframe(fruityvice_normalized)  
 except URLError as e:
     streamlit.error()
   
@@ -60,7 +60,7 @@ if streamlit.button('Get Fruit Load List'):
 # Allow the end user to add a fruit to the list
 def insert_row_snowflake(new_fruit):
    with mycnx.cursor() as my_cur:
-      mycur.execute("insert into fruit_load_list values ('papaya,kiwi')")
+      mycur.execute("insert into fruit_load_list values ('" + papaya +"')")
       return " Thanks for adding " + new_fruit
    
    add_my_fruit = streamlit.text_input('What fruit would you like to add?')
